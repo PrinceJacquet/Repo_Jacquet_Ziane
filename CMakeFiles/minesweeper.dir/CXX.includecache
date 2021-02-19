@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lepetitprince/git/Minesweeper_template/src/Cell.cpp
+Cell.h
+/home/lepetitprince/git/Minesweeper_template/src/Cell.h
+iostream
+-
+
+/home/lepetitprince/git/Minesweeper_template/src/Cell.h
+vector
+-
+
+/home/lepetitprince/git/Minesweeper_template/src/Game.cpp
+Game.h
+/home/lepetitprince/git/Minesweeper_template/src/Game.h
+iostream
+-
+time.h
+-
+ncurses.h
+-
+
+/home/lepetitprince/git/Minesweeper_template/src/Game.h
+vector
+-
+Cell.h
+/home/lepetitprince/git/Minesweeper_template/src/Cell.h
+
+/home/lepetitprince/git/Minesweeper_template/src/main.cpp
+iostream
+-
+ncurses.h
+-
+Game.h
+/home/lepetitprince/git/Minesweeper_template/src/Game.h
+
