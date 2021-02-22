@@ -11,11 +11,11 @@ Cell::~Cell()
 {
 
 }
-void Cell::addMine(bool mine)
+void Cell::addMine(bool mine) /* addMine take as arg a boolean : "mine" and set the object attributes : "_Mine" */
 {
     _Mine = mine;
 }
-int Cell::getNeighbours()
+int Cell::getNeighbours() /* getNeighbours set the object attributes : "_Neighbours"  to the new _Neighbours count*/
 {
     
     return _Neighbours ;
@@ -37,13 +37,13 @@ void Cell::getNeighbours(std::vector<std::vector<Cell>> &grid, int x, int y)
         }
     }
 }
-bool Cell::isDiscovered()
+bool Cell::isDiscovered() /*over complicated way to return _Discovered xD */
 {
-    if (Discovered == true)
+    if (_Discovered == true)
     {
         return true;
     }
-    else 
+    if (_Discovered == false)
     {
         return false;
     }
@@ -61,7 +61,7 @@ void Cell::isDiscovered(bool setDiscoveredStatus)
     }
 }
 
-bool Cell::isAMine()
+bool Cell::isAMine() /*over complicated way to return _Mine (￣▽￣*)ゞ */
 {
     if (_Mine == true)
     {
@@ -92,13 +92,17 @@ bool Cell::discover(std::vector<std::vector<Cell>> &grid, int x, int y)
     }
     return false;
 }
-bool Cell::hasNeighbours()
+bool Cell::hasNeighbours() /*return boolean value (true) if cell has one or more neighboors with a mine*/
 {
-    for(int i =0; i<_Neighbours; i++)
+    /* good readability <(￣︶￣)> */
+    if (_Neighbours > 0)
     {
-        
+        return true;
     }
-    return false;
+    if (_Neighbours == 0)
+    {
+        return false;
+    }
 }
 bool Cell::isFlagged()
 {
