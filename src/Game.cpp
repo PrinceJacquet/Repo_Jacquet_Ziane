@@ -110,11 +110,11 @@ void Game::printGrid()
 }
 int Game::getX()
 {
-    return 1;
+    return _ResX;
 }
 int Game::getY()
 {
-    return 1;
+    return _ResY;
 }
 bool Game::hasLost()
 {
