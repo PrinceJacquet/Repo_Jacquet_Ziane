@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/minesweeper.dir/src/main.cpp.o CMakeFiles/minesweeper.dir/src/Game.cpp.o CMakeFiles/minesweeper.dir/src/Cell.cpp.o  -o bin/minesweeper  -lcurses -lform 

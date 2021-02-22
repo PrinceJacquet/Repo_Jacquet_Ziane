@@ -1,3 +1,0 @@
-/home/lepetitprince/git/Minesweeper_template/CMakeFiles/rebuild_cache.dir
-/home/lepetitprince/git/Minesweeper_template/CMakeFiles/edit_cache.dir
-/home/lepetitprince/git/Minesweeper_template/CMakeFiles/minesweeper.dir
