@@ -1,0 +1,11 @@
+# simple git ignore file to keep a clean repository 
+*
+!.gitignore
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!CMakeLists.txt
+!*/
+!ReadMe.md
+CMakeFiles
