@@ -16,27 +16,3 @@ iostream
 vector
 -
 
-/home/lepetitprince/git/Minesweeper_template/src/Game.cpp
-Game.h
-/home/lepetitprince/git/Minesweeper_template/src/Game.h
-iostream
--
-time.h
--
-ncurses.h
--
-
-/home/lepetitprince/git/Minesweeper_template/src/Game.h
-vector
--
-Cell.h
-/home/lepetitprince/git/Minesweeper_template/src/Cell.h
-
-/home/lepetitprince/git/Minesweeper_template/src/main.cpp
-iostream
--
-ncurses.h
--
-Game.h
-/home/lepetitprince/git/Minesweeper_template/src/Game.h
-

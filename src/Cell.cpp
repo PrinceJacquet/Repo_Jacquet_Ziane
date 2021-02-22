@@ -11,13 +11,14 @@ Cell::~Cell()
 {
 
 }
-void Cell::addMine(bool mine)
+void Cell::addMine(bool mine) /* addMine take as arg a boolean : "mine" and set the object attributes : "_Mine" */
 {
-
+    _Mine = mine;
 }
-int Cell::getNeighbours()
+int Cell::getNeighbours() /* getNeighbours set the object attributes : "_Neighbours"  to the new _Neighbours count*/
 {
-    return 0;
+    
+    return _Neighbours ;
 }
 void Cell::getNeighbours(std::vector<std::vector<Cell>> &grid, int x, int y)
 {
@@ -36,13 +37,47 @@ void Cell::getNeighbours(std::vector<std::vector<Cell>> &grid, int x, int y)
         }
     }
 }
-bool Cell::isDiscovered()
+bool Cell::isDiscovered() /*very over complicated way to return _Discovered xD */
 {
-    return false;
+    if (_Discovered == true)
+    {
+        return true;
+    }
+    if (_Discovered == false)
+    {
+        return false;
+    }
+    else 
+        return false;
 }
-bool Cell::isAMine()
+/* // this just doesnt compile : out of my cpp skills scope xD
+// and every things works fine without it : it's not even use in the program 
+// I dont know where this is from actually
+
+void Cell::isDiscovered(bool setDiscoveredStatus)
 {
-    return true;
+    if (setDiscoveredStatus == true)
+    {
+        _Discovered = true;
+    }
+    if (setDiscoveredStatus == false)
+    {
+        _Discovered = false;
+    }
+}
+*/
+bool Cell::isAMine() /*over complicated way to return _Mine (￣▽￣*)ゞ */
+{
+    if (_Mine == true)
+    {
+        return true;
+    }
+    if (_Mine == false)
+    {
+        return false ;
+    } 
+    else 
+        return false;   
 }
 bool Cell::discover(std::vector<std::vector<Cell>> &grid, int x, int y)
 {
@@ -64,15 +99,25 @@ bool Cell::discover(std::vector<std::vector<Cell>> &grid, int x, int y)
     }
     return false;
 }
-bool Cell::hasNeighbours()
+bool Cell::hasNeighbours() /*return boolean value (true) if cell has one or more neighboors with a mine*/
 {
-    return false;
+    /* good readability <(￣︶￣)> */
+    if (_Neighbours > 0)
+    {
+        return true;
+    }
+    if (_Neighbours == 0)
+    {
+        return false;
+    }
+    else 
+        return false;
 }
 bool Cell::isFlagged()
 {
-    return false;
+    return _Flag; // hehehe ! I got tired of writing 6 lines for just a return xD
 }
 void Cell::flag()
 {
-
+    _Flag = not _Flag; // toggle flag value
 }
