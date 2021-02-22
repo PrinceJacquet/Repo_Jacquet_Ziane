@@ -77,6 +77,12 @@ void Game::discover(int x, int y)
             }
         }
     }
+    // if the player have discovered all the cases that has no mines 
+    // (s)he has won
+    if(_ResY*_ResY-_NumberOfMines==discovered)
+    {
+        _hasWon = true;
+    }
 }
 void Game::printGrid()
 {
@@ -118,11 +124,11 @@ int Game::getY()
 }
 bool Game::hasLost()
 {
-    return false;
+    return _hasLost;
 }
 bool Game::hasWon()
 {
-    return false;
+    return _hasWon;
 }
 void Game::addFlag(int x, int y)
 {

@@ -67,9 +67,9 @@ int main(int argc, char const *argv[])
     while (!game.hasLost() && !game.hasWon());
     printw("\n");
     if (game.hasLost())
-        printw("Oh non!\n");
+        printw("Oh non!\n...\n ┐(︶▽︶)┌ --> we can't all be winners xD\n");
     else if (game.hasWon())
-        printw("Cool t'as gagné!\n");
+        printw("let's Goooooo !!!!! \n");
     refresh();
     std::cin.get();
     endwin();
